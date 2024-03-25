@@ -1,6 +1,7 @@
 vim.keymap.set('n', '<leader>pv', vim.cmd.Vex)
 vim.keymap.set('n', '<leader>pp', vim.cmd.Ex)
 vim.keymap.set('n', '<leader>x', vim.cmd.q)
+vim.keymap.set('n', '<leader>X', vim.cmd.wq)
 vim.keymap.set('n', '<leader><C-q>', '<C-w>h')
 vim.keymap.set('n', '<leader><C-e>', '<C-w>l')
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
@@ -13,3 +14,4 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 vim.keymap.set('n', '<leader><C-s>', vim.cmd.w, { desc = 'shortcut for :w' })
+vim.keymap.set('i', '<C-/>', 'copilot#Accept("<CR>")')
