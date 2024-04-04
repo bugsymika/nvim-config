@@ -1,6 +1,6 @@
+--
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
-
 
 -- highlight when yanking (copying) text
 --  Try it with `yap` in normal mode

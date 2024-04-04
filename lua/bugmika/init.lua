@@ -5,6 +5,7 @@ vim.g.have_nerd_font = true
 require 'bugmika.options'
 require 'bugmika.remap'
 require 'bugmika.autocmd'
+require 'bugmika.commands'
 
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
 if not vim.loop.fs_stat(lazypath) then
@@ -14,6 +15,8 @@ end ---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = require 'bugmika.plugins'
+
+vim.opt.termguicolors = true
 
 require('lazy').setup(plugins, {
   ui = {
