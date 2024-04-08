@@ -12,6 +12,7 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 vim.keymap.set('n', '<C-s>', vim.cmd.w, { desc = 'shortcut for :w' })
+vim.keymap.set('n', '<leader><leader>', vim.cmd.w, { desc = 'shortcut for :w' })
 vim.keymap.set('v', '<C-c>', 'gc', { desc = 'shortcut for gc, shortcut to comment/uncomment' })
 
 vim.keymap.set('n', '<C-b>', '[{', { desc = 'Move to previous block [{]' })
@@ -23,3 +24,5 @@ local toggle_oil = function()
   oil.toggle_float(pwd)
 end
 vim.keymap.set('n', '<leader>pp', toggle_oil, { desc = 'Open current directory' })
+vim.keymap.set('n', '<C-c>', 'gcc')
+vim.keymap.set('v', '<C-c>', 'gcc')

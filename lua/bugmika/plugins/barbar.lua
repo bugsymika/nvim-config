@@ -14,19 +14,20 @@ return {
     vim.keymap.set('n', '<C-3>', '<Cmd>BufferGoto 3<CR>', { silent = true })
     vim.keymap.set('n', '<C-4>', '<Cmd>BufferGoto 4<CR>', { silent = true })
 
-    vim.cmd 'highlight BufferCurrent guibg=#74C05E guifg=black'
-    vim.cmd 'highlight BufferCurrentMod guibg=#E1A907 guifg=black'
-    vim.cmd 'highlight BufferCurrentModBtn guibg=0 guifg=black'
-    vim.cmd 'highlight BufferVisibleMod guibg=red guifg=black'
-    vim.cmd 'highlight BufferInactiveMod guibg=red guifg=black'
-    vim.cmd 'highlight BufferAlternateMod guibg=red guifg=black'
+    -- vim.cmd 'highlight BufferCurrent guibg=#74C05E guifg=black'
+    -- vim.cmd 'highlight BufferInactive guifg=white'
+    -- vim.cmd 'highlight BufferCurrentMod guibg=#E1A907 guifg=black'
+    -- vim.cmd 'highlight BufferCurrentModBtn guibg=0 guifg=black'
+    -- vim.cmd 'highlight BufferVisibleMod guibg=red guifg=black'
+    -- vim.cmd 'highlight BufferInactiveMod guibg=red guifg=black'
+    -- vim.cmd 'highlight BufferAlternateMod guibg=red guifg=black'
 
     vim.cmd 'highlight BufferVisibleIcon guibg=black guifg=black'
   end,
   opts = {
     -- lazy.nvim will automatically call setup for you. put your options here, anything missing will use the default:
     animation = false,
-    maximum_padding = 30,
+    maximum_padding = 25,
     auto_hide = true,
     tabpages = true,
     insert_at_end = true,

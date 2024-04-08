@@ -10,14 +10,15 @@ return {
   require 'bugmika.plugins.nvim-lspconfig', -- LSP Configuration & Plugins
   require 'bugmika.plugins.conform', -- Autoformat
   require 'bugmika.plugins.nvim-cmp', -- Autocompletion
-  require 'bugmika.plugins.theme',
+   -- require 'bugmika.plugins.theme',
+  require 'bugmika.plugins.vscode-theme',
   require 'bugmika.plugins.mini',
   require 'bugmika.plugins.nvim-ts-autotag',
   require 'bugmika.plugins.nvim-treesitter',
   require 'bugmika.plugins.debug',
   require 'bugmika.plugins.indent_line',
   require 'bugmika.plugins.lint',
-  -- require 'bugmika.plugins.neoformat',
+  require 'bugmika.plugins.neoformat',
   -- require 'bugmika.plugins.harpoon',
   require 'bugmika.plugins.nvim-autopairs',
   require 'bugmika.plugins.copilot',
@@ -25,4 +26,5 @@ return {
   require 'bugmika.plugins.barbar',
   require 'bugmika.plugins.oil',
   require 'bugmika.plugins.leap',
+  require 'bugmika.plugins.auto-session',
 }
