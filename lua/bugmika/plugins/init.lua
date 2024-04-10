@@ -10,8 +10,7 @@ return {
   require 'bugmika.plugins.nvim-lspconfig', -- LSP Configuration & Plugins
   require 'bugmika.plugins.conform', -- Autoformat
   require 'bugmika.plugins.nvim-cmp', -- Autocompletion
-   -- require 'bugmika.plugins.theme',
-  require 'bugmika.plugins.vscode-theme',
+  require 'bugmika.plugins.themes.tokyonight',
   require 'bugmika.plugins.mini',
   require 'bugmika.plugins.nvim-ts-autotag',
   require 'bugmika.plugins.nvim-treesitter',
