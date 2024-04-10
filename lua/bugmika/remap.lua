@@ -26,3 +26,22 @@ end
 vim.keymap.set('n', '<leader>pp', toggle_oil, { desc = 'Open current directory' })
 vim.keymap.set('n', '<C-c>', 'gcc')
 vim.keymap.set('v', '<C-c>', 'gcc')
+
+local function open_terminal()
+  vim.cmd 'vnew'
+  vim.cmd 'term'
+end
+
+vim.keymap.set('n', '<C-0>', open_terminal, { desc = 'Open terminal' })
+
+local function restart_lsp()
+  vim.cmd 'LspRestart'
+end
+
+vim.keymap.set('n', '<C-8>', restart_lsp, { desc = 'Restart LSP' })
+
+local function open_git()
+  vim.cmd 'vertical Git'
+end
+
+vim.keymap.set('n', '<C-9>', open_git, { desc = 'Open Git' })
