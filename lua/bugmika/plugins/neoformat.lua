@@ -5,7 +5,7 @@ return {
   },
   config = function()
     vim.api.nvim_create_autocmd({ 'BufWritePre' }, {
-      pattern = { '*.js', '*.ts', "*.vue"},
+      pattern = { '*.py', '*.js', '*.ts', '*.vue', '.css' },
       callback = function()
         vim.cmd 'Neoformat'
       end,

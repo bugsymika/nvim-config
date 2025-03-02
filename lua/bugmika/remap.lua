@@ -18,6 +18,10 @@ vim.keymap.set('v', '<C-c>', 'gc', { desc = 'shortcut for gc, shortcut to commen
 vim.keymap.set('n', '<C-b>', '[{', { desc = 'Move to previous block [{]' })
 vim.keymap.set('n', '<C-B>', ']}', { desc = 'Move to next block [}]' })
 
+vim.keymap.set('i', 'jj', '<Esc>', { desc = 'Exit insert mode' })
+vim.keymap.set('n', '<leader>db', 'orequire IEx; IEx.pry()<Esc>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>s', ':%s/\\<<C-r><C-w>\\>//g<Left><Left>', { noremap = true })
+
 local toggle_oil = function()
   local oil = require 'oil'
   local pwd = vim.fn.expand '%:p:h'
@@ -45,3 +49,10 @@ local function open_git()
 end
 
 vim.keymap.set('n', '<C-9>', open_git, { desc = 'Open Git' })
+
+-- local function replace_word()
+--   local word_under_cursor = vim.call('expand', '<cword>')
+--   print(word_under_cursor)
+-- end
+--
+-- vim.keymap.set('n', '<C-\>', replace_word, { desc = 'Replace' })

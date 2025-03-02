@@ -140,26 +140,36 @@ return {
           },
         },
       },
-      tsserver = {
+      volar = {},
+      gopls = {},
+      templ = { filetypes = { 'templ' } },
+      html = { filetypes = { 'html', 'htmldjango', 'blade' } },
+      eslint_d = { filetypes = { 'javascript' } },
+      djlint = { filetypes = { 'handlebars' } },
+
+      tailwindcss = {
+        filetypes = { 'html', 'elixir', 'eelixir', 'heex', 'typescriptreact', 'javascriptreact', 'htmldjango' },
         init_options = {
-          plugins = {
-            {
-              name = '@vue/typescript-plugin',
-              location = ts_plugin_path,
-              -- If .vue file cannot be recognized in either js or ts file try to add `typescript` and `javascript` in languages table.
-              languages = { 'vue' },
-            },
+          userLanguages = {
+            elixir = 'phoenix-heex',
+            heex = 'phoenix-heex',
           },
         },
-        filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
       },
-      volar = {},
     }
 
+    require('lspconfig').denols.setup {}
+
+    require('lspconfig').pyright.setup {}
+
     local ensure_installed = vim.tbl_keys(servers or {})
+
     vim.list_extend(ensure_installed, {
       'stylua', -- Used to format Lua code
     })
+
+    vim.filetype.add { extension = { templ = 'templ' } }
+
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
     require('mason-lspconfig').setup {
