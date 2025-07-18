@@ -13,23 +13,23 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
-vim.api.nvim_create_autocmd('BufWritePost', {
-  pattern = '*.rb',
-  callback = function()
-    local file = vim.fn.expand '%:p'
-    vim.fn.jobstart('bundle exec rubocop -A ' .. file .. " | sed 's/^/[RuboCop] /'", {
-      on_exit = function(_, exit_code)
-        if exit_code == 0 then
-          print('RuboCop: Auto-corrected ' .. file)
-        else
-          print('RuboCop: Failed to auto-correct ' .. file)
-        end
-        vim.cmd 'checktime'
-      end,
-    })
-  end,
-  group = vim.api.nvim_create_augroup('RuboCop', { clear = true }),
-})
+-- vim.api.nvim_create_autocmd('BufWritePost', {
+--   pattern = '*.rb',
+--   callback = function()
+--     local file = vim.fn.expand '%:p'
+--     vim.fn.jobstart('bundle exec rubocop -A ' .. file .. " | sed 's/^/[RuboCop] /'", {
+--       on_exit = function(_, exit_code)
+--         if exit_code == 0 then
+--           print('RuboCop: Auto-corrected ' .. file)
+--         else
+--           print('RuboCop: Failed to auto-correct ' .. file)
+--         end
+--         vim.cmd 'checktime'
+--       end,
+--     })
+--   end,
+--   group = vim.api.nvim_create_augroup('RuboCop', { clear = true }),
+-- })
 
 -- vim.api.nvim_create_autocmd('BufWritePre', {
 --   pattern = '*.ts,*.tsx,*.js,*.jsx,*.json',

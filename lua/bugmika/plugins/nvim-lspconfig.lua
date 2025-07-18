@@ -143,12 +143,12 @@ return {
       volar = {},
       gopls = {},
       templ = { filetypes = { 'templ' } },
-      html = { filetypes = { 'html', 'htmldjango', 'blade' } },
+      html = { filetypes = { 'html', 'htmldjango', 'blade', 'eruby' } },
       eslint_d = { filetypes = { 'javascript' } },
       djlint = { filetypes = { 'handlebars' } },
 
       tailwindcss = {
-        filetypes = { 'html', 'elixir', 'eelixir', 'heex', 'typescriptreact', 'javascriptreact', 'htmldjango' },
+        filetypes = { 'html', 'elixir', 'eelixir', 'heex', 'typescriptreact', 'javascriptreact', 'htmldjango', 'handlebars', 'eruby' },
         init_options = {
           userLanguages = {
             elixir = 'phoenix-heex',
@@ -157,8 +157,6 @@ return {
         },
       },
     }
-
-    require('lspconfig').denols.setup {}
 
     require('lspconfig').pyright.setup {}
 

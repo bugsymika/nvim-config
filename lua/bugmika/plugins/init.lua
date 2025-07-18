@@ -12,7 +12,7 @@ return {
   require 'bugmika.plugins.nvim-lspconfig', -- LSP Configuration & Plugins
   require 'bugmika.plugins.conform', -- Autoformat
   require 'bugmika.plugins.nvim-cmp', -- Autocompletion
-  require 'bugmika.plugins.themes.cyberdream',
+  require 'bugmika.plugins.themes.tokyonight',
   require 'bugmika.plugins.mini',
   require 'bugmika.plugins.nvim-treesitter',
   require 'bugmika.plugins.nvim-ts-autotag',
@@ -29,4 +29,6 @@ return {
   -- require 'bugmika.plugins.leap',
   require 'bugmika.plugins.auto-session',
   require 'bugmika.plugins.vim-go',
+  require 'bugmika.plugins.nvim-dap',
+  require 'bugmika.plugins.nvim-dap-ui',
 }
